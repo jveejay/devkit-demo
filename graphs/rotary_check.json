@@ -1,0 +1,82 @@
+{
+    "properties": {
+        "name": "rotary check",
+        "environment": {
+            "type": "noflo-nodejs"
+        },
+        "icon": ""
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "grove/Rotary_tj3bj": {
+            "component": "grove/Rotary",
+            "metadata": {
+                "label": "grove/Rotary",
+                "x": 648,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Lcd_pf8x8": {
+            "component": "grove/Lcd",
+            "metadata": {
+                "label": "grove/Lcd",
+                "x": 756,
+                "y": 468,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RunInterval_554pj": {
+            "component": "core/RunInterval",
+            "metadata": {
+                "label": "core/RunInterval",
+                "x": 540,
+                "y": 468,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "grove/Rotary_tj3bj",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Lcd_pf8x8",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RunInterval_554pj",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Rotary_tj3bj",
+                "port": "abs_value"
+            },
+            "metadata": {}
+        },
+        {
+            "data": 111,
+            "tgt": {
+                "process": "core/RunInterval_554pj",
+                "port": "interval"
+            }
+        },
+        {
+            "data": 0,
+            "tgt": {
+                "process": "grove/Rotary_tj3bj",
+                "port": "pin"
+            }
+        }
+    ]
+}

@@ -61,8 +61,7 @@
             "tgt": {
                 "process": "grove/Button_8nv9d",
                 "port": "read"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -72,8 +71,7 @@
             "tgt": {
                 "process": "grove/Led_ha711",
                 "port": "write"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -83,8 +81,7 @@
             "tgt": {
                 "process": "core/Drop_j13bt",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": 150,

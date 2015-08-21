@@ -1,0 +1,186 @@
+{
+    "properties": {
+        "name": "blink-rate",
+        "environment": {
+            "type": "noflo-nodejs"
+        },
+        "description": "Blink at the rate of a rotary setting",
+        "icon": ""
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "core/RunTimeout_41bm1": {
+            "component": "core/RunTimeout",
+            "metadata": {
+                "label": "core/RunTimeout",
+                "x": 972,
+                "y": 468,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Rotary_l3q95": {
+            "component": "grove/Rotary",
+            "metadata": {
+                "label": "grove/Rotary",
+                "x": 828,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Led_n0vxp": {
+            "component": "grove/Led",
+            "metadata": {
+                "label": "grove/Led",
+                "x": 1116,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RunTimeout_jrsl0": {
+            "component": "core/RunTimeout",
+            "metadata": {
+                "label": "core/RunTimeout",
+                "x": 1260,
+                "y": 324,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_faqdu": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 648,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "grove/Rotary_l3q95",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/RunTimeout_41bm1",
+                "port": "time"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "core/RunTimeout_41bm1",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Led_n0vxp",
+                "port": "on"
+            },
+            "metadata": {
+                "route": null
+            }
+        },
+        {
+            "src": {
+                "process": "grove/Led_n0vxp",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/RunTimeout_jrsl0",
+                "port": "start"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/Rotary_l3q95",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/RunTimeout_jrsl0",
+                "port": "time"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/RunTimeout_jrsl0",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Led_n0vxp",
+                "port": "off"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RunTimeout_jrsl0",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Rotary_l3q95",
+                "port": "abs_value"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "core/Kick_faqdu",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Rotary_l3q95",
+                "port": "abs_value"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RunTimeout_jrsl0",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/RunTimeout_jrsl0",
+                "port": "clear"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "data": "0",
+            "tgt": {
+                "process": "grove/Rotary_l3q95",
+                "port": "pin"
+            }
+        },
+        {
+            "data": "3",
+            "tgt": {
+                "process": "grove/Led_n0vxp",
+                "port": "pin"
+            }
+        },
+        {
+            "data": "1",
+            "tgt": {
+                "process": "core/Kick_faqdu",
+                "port": "data"
+            }
+        }
+    ]
+}
