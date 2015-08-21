@@ -15,8 +15,8 @@
             "component": "core/RunTimeout",
             "metadata": {
                 "label": "core/RunTimeout",
-                "x": 972,
-                "y": 468,
+                "x": 288,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -25,8 +25,8 @@
             "component": "grove/Rotary",
             "metadata": {
                 "label": "grove/Rotary",
-                "x": 828,
-                "y": 360,
+                "x": 180,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -35,8 +35,8 @@
             "component": "grove/Led",
             "metadata": {
                 "label": "grove/Led",
-                "x": 1116,
-                "y": 504,
+                "x": 432,
+                "y": -36,
                 "width": 72,
                 "height": 72
             }
@@ -45,8 +45,8 @@
             "component": "core/RunTimeout",
             "metadata": {
                 "label": "core/RunTimeout",
-                "x": 1260,
-                "y": 324,
+                "x": 576,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -55,8 +55,8 @@
             "component": "core/Kick",
             "metadata": {
                 "label": "core/Kick",
-                "x": 648,
-                "y": 360,
+                "x": 36,
+                "y": 108,
                 "width": 72,
                 "height": 72
             }
