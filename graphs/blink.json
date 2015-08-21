@@ -10,6 +10,102 @@
     "inports": {},
     "outports": {},
     "groups": [],
-    "processes": {},
-    "connections": []
+    "processes": {
+        "core/RunInterval_imx5f": {
+            "component": "core/RunInterval",
+            "metadata": {
+                "label": "core/RunInterval",
+                "x": 504,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/button_wdpqm": {
+            "component": "grove/button",
+            "metadata": {
+                "label": "grove/button",
+                "x": 648,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/led_eior8": {
+            "component": "grove/led",
+            "metadata": {
+                "label": "grove/led",
+                "x": 792,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Drop_u5i13": {
+            "component": "core/Drop",
+            "metadata": {
+                "label": "core/Drop",
+                "x": 936,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "core/RunInterval_imx5f",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/button_wdpqm",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/button_wdpqm",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/led_eior8",
+                "port": "write"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/led_eior8",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Drop_u5i13",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": 150,
+            "tgt": {
+                "process": "core/RunInterval_imx5f",
+                "port": "interval"
+            }
+        },
+        {
+            "data": 2,
+            "tgt": {
+                "process": "grove/button_wdpqm",
+                "port": "pin"
+            }
+        },
+        {
+            "data": 3,
+            "tgt": {
+                "process": "grove/led_eior8",
+                "port": "pin"
+            }
+        }
+    ]
 }
