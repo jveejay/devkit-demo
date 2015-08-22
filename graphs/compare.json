@@ -1,0 +1,124 @@
+{
+    "properties": {
+        "name": "compare",
+        "environment": {
+            "type": "noflo-nodejs"
+        },
+        "icon": ""
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "math/Compare_vb75e": {
+            "component": "math/Compare",
+            "metadata": {
+                "label": "math/Compare",
+                "x": 900,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Button_xdtsc": {
+            "component": "grove/Button",
+            "metadata": {
+                "label": "grove/Button",
+                "x": 756,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RunInterval_wtnkx": {
+            "component": "core/RunInterval",
+            "metadata": {
+                "label": "core/RunInterval",
+                "x": 576,
+                "y": 324,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Led_brcdi": {
+            "component": "grove/Led",
+            "metadata": {
+                "label": "grove/Led",
+                "x": 1044,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "grove/Button_xdtsc",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "math/Compare_vb75e",
+                "port": "value"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RunInterval_wtnkx",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_xdtsc",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "math/Compare_vb75e",
+                "port": "pass"
+            },
+            "tgt": {
+                "process": "grove/Led_brcdi",
+                "port": "write"
+            },
+            "metadata": {}
+        },
+        {
+            "data": 0,
+            "tgt": {
+                "process": "math/Compare_vb75e",
+                "port": "comparison"
+            }
+        },
+        {
+            "data": 2,
+            "tgt": {
+                "process": "grove/Button_xdtsc",
+                "port": "pin"
+            }
+        },
+        {
+            "data": 1111,
+            "tgt": {
+                "process": "core/RunInterval_wtnkx",
+                "port": "interval"
+            }
+        },
+        {
+            "data": "!=",
+            "tgt": {
+                "process": "math/Compare_vb75e",
+                "port": "operator"
+            }
+        },
+        {
+            "data": 3,
+            "tgt": {
+                "process": "grove/Led_brcdi",
+                "port": "pin"
+            }
+        }
+    ]
+}
