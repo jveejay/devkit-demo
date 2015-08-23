@@ -1,0 +1,150 @@
+{
+    "properties": {
+        "name": "s-button",
+        "environment": {
+            "type": "noflo-nodejs"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "core/Kick_jsd5q": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 432,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Button_e6c47": {
+            "component": "grove/Button",
+            "metadata": {
+                "label": "grove/Button",
+                "x": 612,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "routers/PacketRegexpRouter_skum8": {
+            "component": "routers/PacketRegexpRouter",
+            "metadata": {
+                "label": "routers/PacketRegexpRouter",
+                "x": 828,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Led_ahxy2": {
+            "component": "grove/Led",
+            "metadata": {
+                "label": "grove/Led",
+                "x": 1044,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Drop_yjpbe": {
+            "component": "core/Drop",
+            "metadata": {
+                "label": "core/Drop",
+                "x": 1188,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "core/Kick_jsd5q",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_e6c47",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/Button_e6c47",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "routers/PacketRegexpRouter_skum8",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "routers/PacketRegexpRouter_skum8",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_e6c47",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "routers/PacketRegexpRouter_skum8",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Led_ahxy2",
+                "port": "write"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "grove/Led_ahxy2",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Drop_yjpbe",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "1",
+            "tgt": {
+                "process": "core/Kick_jsd5q",
+                "port": "data"
+            }
+        },
+        {
+            "data": "2",
+            "tgt": {
+                "process": "grove/Button_e6c47",
+                "port": "pin"
+            }
+        },
+        {
+            "data": "[\"0\",\"1\"]",
+            "tgt": {
+                "process": "routers/PacketRegexpRouter_skum8",
+                "port": "route"
+            }
+        },
+        {
+            "data": "3",
+            "tgt": {
+                "process": "grove/Led_ahxy2",
+                "port": "pin"
+            }
+        }
+    ]
+}
