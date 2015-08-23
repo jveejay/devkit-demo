@@ -290,58 +290,6 @@
         },
         {
             "src": {
-                "process": "routers/PacketRegexpRouter_mbzvk",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Rotary_x0rvx",
-                "port": "abs_value"
-            },
-            "metadata": {
-                "route": null
-            }
-        },
-        {
-            "src": {
-                "process": "routers/PacketRegexpRouter_mbzvk",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Temp_6t15p",
-                "port": "read"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "routers/PacketRegexpRouter_mbzvk",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Light_ipfzr",
-                "port": "raw_value"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "routers/PacketRegexpRouter_mbzvk",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Touch_xt6sp",
-                "port": "pin"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
                 "process": "Start!",
                 "port": "out"
             },
@@ -381,19 +329,6 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "grove/Lcd_4jz2n",
-                "port": "clear"
-            },
-            "metadata": {
-                "route": 0
-            }
-        },
-        {
-            "src": {
-                "process": "core/RunTimeout_rrycj",
-                "port": "out"
-            },
-            "tgt": {
                 "process": "grove/Button_hvis7",
                 "port": "read"
             },
@@ -426,17 +361,60 @@
             }
         },
         {
+            "src": {
+                "process": "routers/PacketRegexpRouter_mbzvk",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Touch_xt6sp",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "routers/PacketRegexpRouter_mbzvk",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Temp_6t15p",
+                "port": "read"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "routers/PacketRegexpRouter_mbzvk",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Rotary_x0rvx",
+                "port": "abs_value"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "routers/PacketRegexpRouter_mbzvk",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Light_ipfzr",
+                "port": "raw_value"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
             "data": 2,
             "tgt": {
                 "process": "grove/Button_hvis7",
                 "port": "pin"
-            }
-        },
-        {
-            "data": 3,
-            "tgt": {
-                "process": "math/Modulo_dgati",
-                "port": "divisor"
             }
         },
         {
@@ -487,17 +465,27 @@
             }
         },
         {
-            "data": "[\"0\",\"1\"]",
-            "tgt": {
-                "process": "routers/PacketRegexpRouter_n4rtn",
-                "port": "route"
-            }
-        },
-        {
             "data": "1",
             "tgt": {
                 "process": "math/SendNumber_2trze",
                 "port": "number"
+            }
+        },
+        {
+            "data": 4,
+            "tgt": {
+                "process": "math/Modulo_dgati",
+                "port": "divisor"
+            }
+        },
+        {
+            "data": [
+                "0",
+                "1"
+            ],
+            "tgt": {
+                "process": "routers/PacketRegexpRouter_n4rtn",
+                "port": "route"
             }
         }
     ]
