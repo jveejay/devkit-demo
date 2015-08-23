@@ -1,0 +1,77 @@
+{
+    "properties": {
+        "name": "starter-kit",
+        "environment": {
+            "type": "noflo-nodejs"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "grove/Lcd_nr1zh": {
+            "component": "grove/Lcd",
+            "metadata": {
+                "label": "grove/Lcd",
+                "x": 936,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RunTimeout_b41yy": {
+            "component": "core/RunTimeout",
+            "metadata": {
+                "label": "core/RunTimeout",
+                "x": 936,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Button_hvis7": {
+            "component": "grove/Button",
+            "metadata": {
+                "label": "grove/Button",
+                "x": 1116,
+                "y": 252,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "core/RunTimeout_b41yy",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_hvis7",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "Press Button",
+            "tgt": {
+                "process": "grove/Lcd_nr1zh",
+                "port": "in"
+            }
+        },
+        {
+            "data": 3000,
+            "tgt": {
+                "process": "core/RunTimeout_b41yy",
+                "port": "time"
+            }
+        },
+        {
+            "data": 2,
+            "tgt": {
+                "process": "grove/Button_hvis7",
+                "port": "pin"
+            }
+        }
+    ]
+}
