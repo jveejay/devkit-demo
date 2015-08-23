@@ -40,6 +40,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "grove/Button_go3om": {
+            "component": "grove/Button",
+            "metadata": {
+                "label": "grove/Button",
+                "x": 180,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -54,6 +64,28 @@
             }
         },
         {
+            "src": {
+                "process": "core/RunInterval_u3aq",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_go3om",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/Button_go3om",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Led_ha711",
+                "port": "write"
+            },
+            "metadata": {}
+        },
+        {
             "data": 150,
             "tgt": {
                 "process": "core/RunInterval_u3aq",
@@ -64,6 +96,13 @@
             "data": 3,
             "tgt": {
                 "process": "grove/Led_ha711",
+                "port": "pin"
+            }
+        },
+        {
+            "data": "2",
+            "tgt": {
+                "process": "grove/Button_go3om",
                 "port": "pin"
             }
         }

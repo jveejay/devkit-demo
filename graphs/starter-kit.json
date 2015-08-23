@@ -206,8 +206,7 @@
             "tgt": {
                 "process": "core/Drop_q4gly",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -218,7 +217,9 @@
                 "process": "routers/PacketRegexpRouter_n4rtn",
                 "port": "in"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 1
+            }
         },
         {
             "src": {
@@ -228,8 +229,7 @@
             "tgt": {
                 "process": "routers/PacketRegexpRouter_mbzvk",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -240,7 +240,9 @@
                 "process": "grove/Lcd_4jz2n",
                 "port": "in"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
         },
         {
             "src": {
@@ -251,7 +253,9 @@
                 "process": "grove/Lcd_4jz2n",
                 "port": "in"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
         },
         {
             "src": {
@@ -262,7 +266,9 @@
                 "process": "grove/Lcd_4jz2n",
                 "port": "in"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
         },
         {
             "src": {
@@ -273,7 +279,9 @@
                 "process": "grove/Lcd_4jz2n",
                 "port": "in"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
         },
         {
             "src": {
@@ -298,7 +306,7 @@
                 "port": "read"
             },
             "metadata": {
-                "route": 0
+                "route": 4
             }
         },
         {
@@ -309,8 +317,7 @@
             "tgt": {
                 "process": "math/Modulo_dgati",
                 "port": "dividend"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -320,8 +327,7 @@
             "tgt": {
                 "process": "grove/Button_hvis7",
                 "port": "read"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -333,7 +339,7 @@
                 "port": "read"
             },
             "metadata": {
-                "route": 0
+                "route": 2
             }
         },
         {
@@ -344,8 +350,7 @@
             "tgt": {
                 "process": "math/Accumulate_ex79s",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -357,7 +362,7 @@
                 "port": "in"
             },
             "metadata": {
-                "route": 0
+                "route": 10
             }
         },
         {
@@ -369,7 +374,9 @@
                 "process": "grove/Touch_xt6sp",
                 "port": "read"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 7
+            }
         },
         {
             "src": {
@@ -381,7 +388,7 @@
                 "port": "read"
             },
             "metadata": {
-                "route": 0
+                "route": 7
             }
         },
         {
@@ -394,7 +401,7 @@
                 "port": "abs_value"
             },
             "metadata": {
-                "route": 0
+                "route": 7
             }
         },
         {
@@ -407,7 +414,7 @@
                 "port": "raw_value"
             },
             "metadata": {
-                "route": 0
+                "route": 7
             }
         },
         {
