@@ -7,34 +7,85 @@
     },
     "inports": {},
     "outports": {},
-    "groups": [],
+    "groups": [
+        {
+            "name": "Check button press",
+            "nodes": [
+                "grove/Button_hvis7",
+                "routers/PacketRegexpRouter_n4rtn"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "LCD \"Press Button\"",
+            "nodes": [
+                "core/Kick_7w0an",
+                "grove/Lcd_4jz2n"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        }
+    ],
     "processes": {
-        "grove/Lcd_nr1zh": {
-            "component": "grove/Lcd",
-            "metadata": {
-                "label": "grove/Lcd",
-                "x": 936,
-                "y": 396,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/RunTimeout_b41yy": {
-            "component": "core/RunTimeout",
-            "metadata": {
-                "label": "core/RunTimeout",
-                "x": 936,
-                "y": 252,
-                "width": 72,
-                "height": 72
-            }
-        },
         "grove/Button_hvis7": {
             "component": "grove/Button",
             "metadata": {
                 "label": "grove/Button",
-                "x": 1116,
-                "y": 252,
+                "x": 360,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "routers/PacketRegexpRouter_n4rtn": {
+            "component": "routers/PacketRegexpRouter",
+            "metadata": {
+                "label": "routers/PacketRegexpRouter",
+                "x": 504,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Drop_q4gly": {
+            "component": "core/Drop",
+            "metadata": {
+                "label": "core/Drop",
+                "x": 648,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Lcd_4jz2n": {
+            "component": "grove/Lcd",
+            "metadata": {
+                "label": "grove/Lcd",
+                "x": 180,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_7w0an": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 72,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Led_gjz86": {
+            "component": "grove/Led",
+            "metadata": {
+                "label": "grove/Led",
+                "x": 648,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -43,7 +94,40 @@
     "connections": [
         {
             "src": {
-                "process": "core/RunTimeout_b41yy",
+                "process": "routers/PacketRegexpRouter_n4rtn",
+                "port": "missed"
+            },
+            "tgt": {
+                "process": "core/Drop_q4gly",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/Button_hvis7",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "routers/PacketRegexpRouter_n4rtn",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Kick_7w0an",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Lcd_4jz2n",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/Lcd_4jz2n",
                 "port": "out"
             },
             "tgt": {
@@ -53,24 +137,41 @@
             "metadata": {}
         },
         {
-            "data": "Press Button",
-            "tgt": {
-                "process": "grove/Lcd_nr1zh",
-                "port": "in"
-            }
-        },
-        {
-            "data": 3000,
-            "tgt": {
-                "process": "core/RunTimeout_b41yy",
-                "port": "time"
-            }
-        },
-        {
             "data": 2,
             "tgt": {
                 "process": "grove/Button_hvis7",
                 "port": "pin"
+            }
+        },
+        {
+            "data": [
+                "0",
+                "1"
+            ],
+            "tgt": {
+                "process": "routers/PacketRegexpRouter_n4rtn",
+                "port": "route"
+            }
+        },
+        {
+            "data": "Press Button",
+            "tgt": {
+                "process": "core/Kick_7w0an",
+                "port": "data"
+            }
+        },
+        {
+            "data": 3,
+            "tgt": {
+                "process": "grove/Led_gjz86",
+                "port": "pin"
+            }
+        },
+        {
+            "data": "0",
+            "tgt": {
+                "process": "routers/PacketRegexpRouter_n4rtn",
+                "port": "in"
             }
         }
     ]
