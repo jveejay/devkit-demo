@@ -418,18 +418,6 @@
             }
         },
         {
-            "data": [
-                "0",
-                "1",
-                "2",
-                "3"
-            ],
-            "tgt": {
-                "process": "routers/PacketRegexpRouter_mbzvk",
-                "port": "route"
-            }
-        },
-        {
             "data": 2,
             "tgt": {
                 "process": "grove/Light_ipfzr",
@@ -476,6 +464,18 @@
             "tgt": {
                 "process": "math/Modulo_dgati",
                 "port": "divisor"
+            }
+        },
+        {
+            "data": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ],
+            "tgt": {
+                "process": "routers/PacketRegexpRouter_mbzvk",
+                "port": "route"
             }
         },
         {

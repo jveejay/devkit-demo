@@ -1,0 +1,87 @@
+{
+    "properties": {
+        "name": "x",
+        "environment": {
+            "type": "noflo-nodejs",
+            "content": ""
+        },
+        "icon": ""
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "math/SendNumber_wrkx7": {
+            "component": "math/SendNumber",
+            "metadata": {
+                "label": "math/SendNumber",
+                "x": 576,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "math/Accumulate_a5bn6": {
+            "component": "math/Accumulate",
+            "metadata": {
+                "label": "math/Accumulate",
+                "x": 756,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_gu34l": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "core/Output",
+                "x": 900,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "math/SendNumber_wrkx7",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "math/Accumulate_a5bn6",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "math/Accumulate_a5bn6",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_gu34l",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Output_gu34l",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "math/SendNumber_wrkx7",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": 1,
+            "tgt": {
+                "process": "math/SendNumber_wrkx7",
+                "port": "number"
+            }
+        }
+    ]
+}

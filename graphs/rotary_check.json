@@ -1,6 +1,6 @@
 {
     "properties": {
-        "name": "rotary check",
+        "name": "rotary_check",
         "environment": {
             "type": "noflo-nodejs"
         },
@@ -50,8 +50,7 @@
             "tgt": {
                 "process": "grove/Lcd_pf8x8",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -61,8 +60,7 @@
             "tgt": {
                 "process": "grove/Rotary_tj3bj",
                 "port": "abs_value"
-            },
-            "metadata": {}
+            }
         },
         {
             "data": 111,
