@@ -60,7 +60,7 @@
             "component": "grove/Button",
             "metadata": {
                 "label": "grove/Button",
-                "x": 1404,
+                "x": 1368,
                 "y": 72,
                 "width": 72,
                 "height": 72
@@ -70,7 +70,7 @@
             "component": "routers/PacketRegexpRouter",
             "metadata": {
                 "label": "routers/PacketRegexpRouter",
-                "x": 1260,
+                "x": 1224,
                 "y": 216,
                 "width": 72,
                 "height": 72
@@ -80,7 +80,7 @@
             "component": "core/Drop",
             "metadata": {
                 "label": "core/Drop",
-                "x": 1404,
+                "x": 1368,
                 "y": 216,
                 "width": 72,
                 "height": 72
@@ -160,7 +160,7 @@
             "component": "core/RunTimeout",
             "metadata": {
                 "label": "core/RunTimeout",
-                "x": 1044,
+                "x": 1008,
                 "y": 504,
                 "width": 72,
                 "height": 72
@@ -171,7 +171,7 @@
             "metadata": {
                 "label": "math/Accumulate",
                 "x": 216,
-                "y": 504,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
@@ -191,7 +191,7 @@
             "metadata": {
                 "label": "math/SendNumber",
                 "x": 108,
-                "y": 504,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
