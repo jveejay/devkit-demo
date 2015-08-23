@@ -10,57 +10,9 @@
     "outports": {},
     "groups": [
         {
-            "name": "Identify next sensor",
-            "nodes": [
-                "math/Accumulate_3yxmr",
-                "math/Modulo_dgati",
-                "routers/PacketRegexpRouter_mbzvk"
-            ],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
-            "name": "Rotary sensor",
-            "nodes": [
-                "grove/Rotary_x0rvx"
-            ],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
-            "name": "Temp sensor",
-            "nodes": [
-                "grove/Temp_6t15p"
-            ],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
-            "name": "Light sensor",
-            "nodes": [
-                "grove/Light_ipfzr"
-            ],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
-            "name": "Touch sensor",
-            "nodes": [
-                "grove/Touch_xt6sp"
-            ],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
             "name": "Button press wait",
             "nodes": [
                 "core/Drop_q4gly",
-                "core/Kick_7w0an",
                 "grove/Button_hvis7",
                 "routers/PacketRegexpRouter_n4rtn"
             ],
@@ -69,10 +21,35 @@
             }
         },
         {
-            "name": "LCD Output",
+            "name": "Sensors",
             "nodes": [
+                "grove/Light_ipfzr",
+                "grove/Rotary_x0rvx",
+                "grove/Temp_6t15p",
+                "grove/Touch_xt6sp"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "Display",
+            "nodes": [
+                "core/Kick_arl50",
                 "core/RunTimeout_rrycj",
                 "grove/Lcd_4jz2n"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "Identify next sensor",
+            "nodes": [
+                "math/Accumulate_ex79s",
+                "math/Modulo_dgati",
+                "math/SendNumber_rrvwz",
+                "routers/PacketRegexpRouter_mbzvk"
             ],
             "metadata": {
                 "description": ""
@@ -84,8 +61,8 @@
             "component": "grove/Button",
             "metadata": {
                 "label": "grove/Button",
-                "x": -468,
-                "y": 864,
+                "x": 324,
+                "y": 396,
                 "width": 72,
                 "height": 72
             }
@@ -94,8 +71,8 @@
             "component": "routers/PacketRegexpRouter",
             "metadata": {
                 "label": "routers/PacketRegexpRouter",
-                "x": -324,
-                "y": 864,
+                "x": 180,
+                "y": 540,
                 "width": 72,
                 "height": 72
             }
@@ -104,8 +81,8 @@
             "component": "core/Drop",
             "metadata": {
                 "label": "core/Drop",
-                "x": -216,
-                "y": 864,
+                "x": 324,
+                "y": 540,
                 "width": 72,
                 "height": 72
             }
@@ -114,28 +91,8 @@
             "component": "grove/Lcd",
             "metadata": {
                 "label": "grove/Lcd",
-                "x": 1044,
-                "y": 504,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Kick_7w0an": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "core/Kick",
-                "x": -216,
-                "y": 792,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "math/Accumulate_3yxmr": {
-            "component": "math/Accumulate",
-            "metadata": {
-                "label": "math/Accumulate",
-                "x": 108,
-                "y": 864,
+                "x": 1296,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -144,8 +101,8 @@
             "component": "math/Modulo",
             "metadata": {
                 "label": "math/Modulo",
-                "x": 216,
-                "y": 864,
+                "x": 756,
+                "y": 360,
                 "width": 72,
                 "height": 72
             }
@@ -154,8 +111,8 @@
             "component": "routers/PacketRegexpRouter",
             "metadata": {
                 "label": "routers/PacketRegexpRouter",
-                "x": 360,
-                "y": 864,
+                "x": 900,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -164,8 +121,8 @@
             "component": "grove/Light",
             "metadata": {
                 "label": "grove/Light",
-                "x": 720,
-                "y": 288,
+                "x": 1116,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
@@ -174,8 +131,8 @@
             "component": "grove/Rotary",
             "metadata": {
                 "label": "grove/Rotary",
-                "x": 720,
-                "y": 864,
+                "x": 1116,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -184,8 +141,8 @@
             "component": "grove/Temp",
             "metadata": {
                 "label": "grove/Temp",
-                "x": 720,
-                "y": 648,
+                "x": 1116,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -194,8 +151,8 @@
             "component": "grove/Touch",
             "metadata": {
                 "label": "grove/Touch",
-                "x": 720,
-                "y": 468,
+                "x": 1116,
+                "y": 36,
                 "width": 72,
                 "height": 72
             }
@@ -204,8 +161,48 @@
             "component": "core/RunTimeout",
             "metadata": {
                 "label": "core/RunTimeout",
-                "x": 1188,
-                "y": 504,
+                "x": 1440,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "math/Accumulate_ex79s": {
+            "component": "math/Accumulate",
+            "metadata": {
+                "label": "math/Accumulate",
+                "x": 648,
+                "y": 360,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "math/SendNumber_rrvwz": {
+            "component": "math/SendNumber",
+            "metadata": {
+                "label": "math/SendNumber",
+                "x": 504,
+                "y": 324,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "Start!": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "Start!",
+                "x": 36,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_arl50": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 1584,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -236,28 +233,6 @@
         },
         {
             "src": {
-                "process": "core/Kick_7w0an",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Lcd_4jz2n",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "math/Accumulate_3yxmr",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "math/Modulo_dgati",
-                "port": "dividend"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
                 "process": "math/Modulo_dgati",
                 "port": "remainder"
             },
@@ -266,30 +241,6 @@
                 "port": "in"
             },
             "metadata": {}
-        },
-        {
-            "src": {
-                "process": "routers/PacketRegexpRouter_n4rtn",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "core/Kick_7w0an",
-                "port": "in"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "routers/PacketRegexpRouter_n4rtn",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "math/Accumulate_3yxmr",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 0
-            }
         },
         {
             "src": {
@@ -347,17 +298,6 @@
             "metadata": {
                 "route": 0
             }
-        },
-        {
-            "src": {
-                "process": "core/RunTimeout_rrycj",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Button_hvis7",
-                "port": "read"
-            },
-            "metadata": {}
         },
         {
             "src": {
@@ -412,6 +352,87 @@
             }
         },
         {
+            "src": {
+                "process": "math/SendNumber_rrvwz",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "math/Accumulate_ex79s",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "routers/PacketRegexpRouter_n4rtn",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "math/SendNumber_rrvwz",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "Start!",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_hvis7",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Kick_arl50",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Lcd_4jz2n",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RunTimeout_rrycj",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Kick_arl50",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "routers/PacketRegexpRouter_n4rtn",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_hvis7",
+                "port": "read"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "math/Accumulate_ex79s",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "math/Modulo_dgati",
+                "port": "dividend"
+            },
+            "metadata": {}
+        },
+        {
             "data": 2,
             "tgt": {
                 "process": "grove/Button_hvis7",
@@ -426,13 +447,6 @@
             "tgt": {
                 "process": "routers/PacketRegexpRouter_n4rtn",
                 "port": "route"
-            }
-        },
-        {
-            "data": "Press Button",
-            "tgt": {
-                "process": "core/Kick_7w0an",
-                "port": "data"
             }
         },
         {
@@ -483,10 +497,24 @@
             }
         },
         {
-            "data": "3000",
+            "data": 1,
+            "tgt": {
+                "process": "math/SendNumber_rrvwz",
+                "port": "number"
+            }
+        },
+        {
+            "data": 3000,
             "tgt": {
                 "process": "core/RunTimeout_rrycj",
-                "port": "start"
+                "port": "time"
+            }
+        },
+        {
+            "data": "Press button",
+            "tgt": {
+                "process": "core/Kick_arl50",
+                "port": "data"
             }
         }
     ]
