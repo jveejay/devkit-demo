@@ -11,11 +11,7 @@
     "groups": [
         {
             "name": "Button press wait",
-            "nodes": [
-                "core/Drop_q4gly",
-                "grove/Button_hvis7",
-                "routers/PacketRegexpRouter_n4rtn"
-            ],
+            "nodes": [],
             "metadata": {
                 "description": ""
             }
@@ -56,42 +52,12 @@
         }
     ],
     "processes": {
-        "grove/Button_hvis7": {
-            "component": "grove/Button",
-            "metadata": {
-                "label": "grove/Button",
-                "x": 1368,
-                "y": 72,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "routers/PacketRegexpRouter_n4rtn": {
-            "component": "routers/PacketRegexpRouter",
-            "metadata": {
-                "label": "routers/PacketRegexpRouter",
-                "x": 1224,
-                "y": 216,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "core/Drop_q4gly": {
-            "component": "core/Drop",
-            "metadata": {
-                "label": "core/Drop",
-                "x": 1368,
-                "y": 216,
-                "width": 72,
-                "height": 72
-            }
-        },
         "grove/Lcd_4jz2n": {
             "component": "grove/Lcd",
             "metadata": {
                 "label": "grove/Lcd",
-                "x": 900,
-                "y": 504,
+                "x": 864,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -100,8 +66,8 @@
             "component": "math/Modulo",
             "metadata": {
                 "label": "math/Modulo",
-                "x": 360,
-                "y": 504,
+                "x": 324,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -110,8 +76,8 @@
             "component": "routers/PacketRegexpRouter",
             "metadata": {
                 "label": "routers/PacketRegexpRouter",
-                "x": 468,
-                "y": 504,
+                "x": 432,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
@@ -120,8 +86,8 @@
             "component": "grove/Light",
             "metadata": {
                 "label": "grove/Light",
-                "x": 684,
-                "y": 504,
+                "x": 648,
+                "y": 612,
                 "width": 72,
                 "height": 72
             }
@@ -130,8 +96,8 @@
             "component": "grove/Rotary",
             "metadata": {
                 "label": "grove/Rotary",
-                "x": 684,
-                "y": 360,
+                "x": 648,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
@@ -140,8 +106,8 @@
             "component": "grove/Temp",
             "metadata": {
                 "label": "grove/Temp",
-                "x": 684,
-                "y": 216,
+                "x": 648,
+                "y": 324,
                 "width": 72,
                 "height": 72
             }
@@ -150,8 +116,8 @@
             "component": "grove/Touch",
             "metadata": {
                 "label": "grove/Touch",
-                "x": 684,
-                "y": 72,
+                "x": 648,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -161,7 +127,7 @@
             "metadata": {
                 "label": "core/RunTimeout",
                 "x": 1008,
-                "y": 504,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -170,18 +136,8 @@
             "component": "math/Accumulate",
             "metadata": {
                 "label": "math/Accumulate",
-                "x": 216,
-                "y": 468,
-                "width": 72,
-                "height": 72
-            }
-        },
-        "Start!": {
-            "component": "core/Kick",
-            "metadata": {
-                "label": "Start!",
-                "x": 1044,
-                "y": 72,
+                "x": 180,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -190,37 +146,54 @@
             "component": "math/SendNumber",
             "metadata": {
                 "label": "math/SendNumber",
-                "x": 108,
-                "y": 468,
+                "x": 72,
+                "y": 144,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Button_iemmr": {
+            "component": "grove/Button",
+            "metadata": {
+                "label": "grove/Button",
+                "x": 1368,
+                "y": 648,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/RunInterval_ffc8x": {
+            "component": "core/RunInterval",
+            "metadata": {
+                "label": "core/RunInterval",
+                "x": 1152,
+                "y": 648,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_y3m8i": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 1152,
+                "y": 216,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Lcd_rht5s": {
+            "component": "grove/Lcd",
+            "metadata": {
+                "label": "grove/Lcd",
+                "x": 1260,
+                "y": 216,
                 "width": 72,
                 "height": 72
             }
         }
     },
     "connections": [
-        {
-            "src": {
-                "process": "routers/PacketRegexpRouter_n4rtn",
-                "port": "missed"
-            },
-            "tgt": {
-                "process": "core/Drop_q4gly",
-                "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "grove/Button_hvis7",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "routers/PacketRegexpRouter_n4rtn",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 1
-            }
-        },
         {
             "src": {
                 "process": "math/Modulo_dgati",
@@ -298,19 +271,6 @@
         },
         {
             "src": {
-                "process": "Start!",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Button_hvis7",
-                "port": "read"
-            },
-            "metadata": {
-                "route": 4
-            }
-        },
-        {
-            "src": {
                 "process": "math/Accumulate_ex79s",
                 "port": "out"
             },
@@ -321,48 +281,12 @@
         },
         {
             "src": {
-                "process": "routers/PacketRegexpRouter_n4rtn",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Button_hvis7",
-                "port": "read"
-            }
-        },
-        {
-            "src": {
-                "process": "core/RunTimeout_rrycj",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Button_hvis7",
-                "port": "read"
-            },
-            "metadata": {
-                "route": 2
-            }
-        },
-        {
-            "src": {
                 "process": "math/SendNumber_2trze",
                 "port": "out"
             },
             "tgt": {
                 "process": "math/Accumulate_ex79s",
                 "port": "in"
-            }
-        },
-        {
-            "src": {
-                "process": "routers/PacketRegexpRouter_n4rtn",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "math/SendNumber_2trze",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 10
             }
         },
         {
@@ -418,11 +342,72 @@
             }
         },
         {
-            "data": 2,
+            "src": {
+                "process": "grove/Button_iemmr",
+                "port": "out"
+            },
             "tgt": {
-                "process": "grove/Button_hvis7",
-                "port": "pin"
+                "process": "math/SendNumber_2trze",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/Button_iemmr",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/RunInterval_ffc8x",
+                "port": "stop"
+            },
+            "metadata": {
+                "route": 0
             }
+        },
+        {
+            "src": {
+                "process": "core/RunTimeout_rrycj",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Kick_y3m8i",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Kick_y3m8i",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Lcd_rht5s",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "grove/Lcd_rht5s",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/RunInterval_ffc8x",
+                "port": "start"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/RunInterval_ffc8x",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_iemmr",
+                "port": "read"
+            },
+            "metadata": {}
         },
         {
             "data": 2,
@@ -486,13 +471,24 @@
             }
         },
         {
-            "data": [
-                "0",
-                "1"
-            ],
+            "data": 2,
             "tgt": {
-                "process": "routers/PacketRegexpRouter_n4rtn",
-                "port": "route"
+                "process": "grove/Button_iemmr",
+                "port": "pin"
+            }
+        },
+        {
+            "data": 1000,
+            "tgt": {
+                "process": "core/RunInterval_ffc8x",
+                "port": "interval"
+            }
+        },
+        {
+            "data": "Press Button",
+            "tgt": {
+                "process": "core/Kick_y3m8i",
+                "port": "data"
             }
         }
     ]
