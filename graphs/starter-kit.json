@@ -39,12 +39,13 @@
             }
         },
         {
-            "name": "Identify next sensor",
+            "name": "Next?",
             "nodes": [
                 "math/Accumulate_ex79s",
                 "math/Modulo_dgati",
                 "math/SendNumber_2trze",
-                "routers/PacketRegexpRouter_mbzvk"
+                "routers/PacketRegexpRouter_mbzvk",
+                "strings/ToString_vdfsd"
             ],
             "metadata": {
                 "description": ""
@@ -56,8 +57,8 @@
             "component": "grove/Lcd",
             "metadata": {
                 "label": "grove/Lcd",
-                "x": 864,
-                "y": 180,
+                "x": 756,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -66,8 +67,8 @@
             "component": "math/Modulo",
             "metadata": {
                 "label": "math/Modulo",
-                "x": 324,
-                "y": 180,
+                "x": 360,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
@@ -76,8 +77,8 @@
             "component": "routers/PacketRegexpRouter",
             "metadata": {
                 "label": "routers/PacketRegexpRouter",
-                "x": 432,
-                "y": 216,
+                "x": 216,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -86,8 +87,8 @@
             "component": "grove/Light",
             "metadata": {
                 "label": "grove/Light",
-                "x": 648,
-                "y": 612,
+                "x": 540,
+                "y": 576,
                 "width": 72,
                 "height": 72
             }
@@ -96,8 +97,8 @@
             "component": "grove/Rotary",
             "metadata": {
                 "label": "grove/Rotary",
-                "x": 648,
-                "y": 468,
+                "x": 540,
+                "y": 432,
                 "width": 72,
                 "height": 72
             }
@@ -106,8 +107,8 @@
             "component": "grove/Temp",
             "metadata": {
                 "label": "grove/Temp",
-                "x": 648,
-                "y": 324,
+                "x": 540,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -116,8 +117,8 @@
             "component": "grove/Touch",
             "metadata": {
                 "label": "grove/Touch",
-                "x": 648,
-                "y": 180,
+                "x": 540,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -126,8 +127,8 @@
             "component": "core/RunTimeout",
             "metadata": {
                 "label": "core/RunTimeout",
-                "x": 1008,
-                "y": 180,
+                "x": 900,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -136,8 +137,8 @@
             "component": "math/Accumulate",
             "metadata": {
                 "label": "math/Accumulate",
-                "x": 180,
-                "y": 180,
+                "x": 216,
+                "y": 468,
                 "width": 72,
                 "height": 72
             }
@@ -146,8 +147,8 @@
             "component": "math/SendNumber",
             "metadata": {
                 "label": "math/SendNumber",
-                "x": 72,
-                "y": 144,
+                "x": 108,
+                "y": 432,
                 "width": 72,
                 "height": 72
             }
@@ -156,8 +157,8 @@
             "component": "grove/Button",
             "metadata": {
                 "label": "grove/Button",
-                "x": 1368,
-                "y": 648,
+                "x": 1152,
+                "y": 828,
                 "width": 72,
                 "height": 72
             }
@@ -166,8 +167,8 @@
             "component": "core/RunInterval",
             "metadata": {
                 "label": "core/RunInterval",
-                "x": 1152,
-                "y": 648,
+                "x": 1332,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
@@ -176,8 +177,8 @@
             "component": "core/Kick",
             "metadata": {
                 "label": "core/Kick",
-                "x": 1152,
-                "y": 216,
+                "x": 1044,
+                "y": 144,
                 "width": 72,
                 "height": 72
             }
@@ -186,24 +187,44 @@
             "component": "grove/Lcd",
             "metadata": {
                 "label": "grove/Lcd",
-                "x": 1260,
-                "y": 216,
+                "x": 1152,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/ToString_vdfsd": {
+            "component": "strings/ToString",
+            "metadata": {
+                "label": "strings/ToString",
+                "x": 108,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_u3a3v": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 1152,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "grove/Led_tf801": {
+            "component": "grove/Led",
+            "metadata": {
+                "label": "grove/Led",
+                "x": 1332,
+                "y": 864,
                 "width": 72,
                 "height": 72
             }
         }
     },
     "connections": [
-        {
-            "src": {
-                "process": "math/Modulo_dgati",
-                "port": "remainder"
-            },
-            "tgt": {
-                "process": "routers/PacketRegexpRouter_mbzvk",
-                "port": "in"
-            }
-        },
         {
             "src": {
                 "process": "grove/Rotary_x0rvx",
@@ -349,8 +370,7 @@
             "tgt": {
                 "process": "math/SendNumber_2trze",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -373,8 +393,7 @@
             "tgt": {
                 "process": "core/Kick_y3m8i",
                 "port": "in"
-            },
-            "metadata": {}
+            }
         },
         {
             "src": {
@@ -384,12 +403,42 @@
             "tgt": {
                 "process": "grove/Lcd_rht5s",
                 "port": "in"
+            }
+        },
+        {
+            "src": {
+                "process": "grove/Lcd_rht5s",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/RunInterval_ffc8x",
+                "port": "start"
+            }
+        },
+        {
+            "src": {
+                "process": "core/RunInterval_ffc8x",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Button_iemmr",
+                "port": "read"
+            }
+        },
+        {
+            "src": {
+                "process": "strings/ToString_vdfsd",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "routers/PacketRegexpRouter_mbzvk",
+                "port": "in"
             },
             "metadata": {}
         },
         {
             "src": {
-                "process": "grove/Lcd_rht5s",
+                "process": "core/Kick_u3a3v",
                 "port": "out"
             },
             "tgt": {
@@ -400,12 +449,23 @@
         },
         {
             "src": {
-                "process": "core/RunInterval_ffc8x",
-                "port": "out"
+                "process": "grove/Button_iemmr",
+                "port": "value"
             },
             "tgt": {
-                "process": "grove/Button_iemmr",
-                "port": "read"
+                "process": "grove/Led_tf801",
+                "port": "write"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "math/Modulo_dgati",
+                "port": "remainder"
+            },
+            "tgt": {
+                "process": "strings/ToString_vdfsd",
+                "port": "in"
             },
             "metadata": {}
         },
@@ -489,6 +549,20 @@
             "tgt": {
                 "process": "core/Kick_y3m8i",
                 "port": "data"
+            }
+        },
+        {
+            "data": "1",
+            "tgt": {
+                "process": "core/Kick_u3a3v",
+                "port": "data"
+            }
+        },
+        {
+            "data": 3,
+            "tgt": {
+                "process": "grove/Led_tf801",
+                "port": "pin"
             }
         }
     ]
