@@ -1,6 +1,6 @@
 {
     "properties": {
-        "name": "starter-kit",
+        "name": "starter-kit-verbose",
         "environment": {
             "type": "noflo-nodejs"
         },
@@ -12,18 +12,6 @@
         {
             "name": "Button press wait",
             "nodes": [],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
-            "name": "Sensors",
-            "nodes": [
-                "grove/Light_ipfzr",
-                "grove/Rotary_x0rvx",
-                "grove/Temp_6t15p",
-                "grove/Touch_xt6sp"
-            ],
             "metadata": {
                 "description": ""
             }
@@ -64,6 +52,50 @@
             "metadata": {
                 "description": ""
             }
+        },
+        {
+            "name": "Touch",
+            "nodes": [
+                "core/Kick_m9hei",
+                "grove/Touch_xt6sp",
+                "strings/CompileString_zlvw8"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "Temperature",
+            "nodes": [
+                "core/Kick_ih3qr",
+                "grove/Temp_6t15p",
+                "strings/CompileString_nz3zk"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "Rotary",
+            "nodes": [
+                "core/Kick_rf7de",
+                "grove/Rotary_x0rvx",
+                "strings/CompileString_b824o"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "Light",
+            "nodes": [
+                "core/Kick_ekjz2",
+                "grove/Light_ipfzr",
+                "strings/CompileString_125s0"
+            ],
+            "metadata": {
+                "description": ""
+            }
         }
     ],
     "processes": {
@@ -71,8 +103,8 @@
             "component": "grove/Lcd",
             "metadata": {
                 "label": "grove/Lcd",
-                "x": 1800,
-                "y": 468,
+                "x": 2088,
+                "y": 540,
                 "width": 72,
                 "height": 72
             }
@@ -81,8 +113,8 @@
             "component": "math/Modulo",
             "metadata": {
                 "label": "math/Modulo",
-                "x": 1044,
-                "y": 396,
+                "x": 1116,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -91,8 +123,8 @@
             "component": "routers/PacketRegexpRouter",
             "metadata": {
                 "label": "routers/PacketRegexpRouter",
-                "x": 1296,
-                "y": 396,
+                "x": 1368,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -101,8 +133,8 @@
             "component": "grove/Light",
             "metadata": {
                 "label": "grove/Light",
-                "x": 1584,
-                "y": 468,
+                "x": 1728,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -111,8 +143,8 @@
             "component": "grove/Rotary",
             "metadata": {
                 "label": "grove/Rotary",
-                "x": 1584,
-                "y": 324,
+                "x": 1728,
+                "y": 504,
                 "width": 72,
                 "height": 72
             }
@@ -121,8 +153,8 @@
             "component": "grove/Temp",
             "metadata": {
                 "label": "grove/Temp",
-                "x": 1584,
-                "y": 180,
+                "x": 1728,
+                "y": 72,
                 "width": 72,
                 "height": 72
             }
@@ -131,8 +163,8 @@
             "component": "grove/Touch",
             "metadata": {
                 "label": "grove/Touch",
-                "x": 1584,
-                "y": 36,
+                "x": 1728,
+                "y": 288,
                 "width": 72,
                 "height": 72
             }
@@ -141,8 +173,8 @@
             "component": "core/RunTimeout",
             "metadata": {
                 "label": "core/RunTimeout",
-                "x": 1944,
-                "y": 468,
+                "x": 2232,
+                "y": 540,
                 "width": 72,
                 "height": 72
             }
@@ -151,8 +183,8 @@
             "component": "math/Accumulate",
             "metadata": {
                 "label": "math/Accumulate",
-                "x": 936,
-                "y": 360,
+                "x": 1008,
+                "y": 684,
                 "width": 72,
                 "height": 72
             }
@@ -161,8 +193,8 @@
             "component": "math/SendNumber",
             "metadata": {
                 "label": "math/SendNumber",
-                "x": 792,
-                "y": 360,
+                "x": 864,
+                "y": 684,
                 "width": 72,
                 "height": 72
             }
@@ -171,8 +203,8 @@
             "component": "grove/Button",
             "metadata": {
                 "label": "grove/Button",
-                "x": 216,
-                "y": 108,
+                "x": 180,
+                "y": 684,
                 "width": 72,
                 "height": 72
             }
@@ -181,8 +213,8 @@
             "component": "core/Kick",
             "metadata": {
                 "label": "core/Kick",
-                "x": 612,
-                "y": 36,
+                "x": 576,
+                "y": 648,
                 "width": 72,
                 "height": 72
             }
@@ -191,8 +223,8 @@
             "component": "strings/ToString",
             "metadata": {
                 "label": "strings/ToString",
-                "x": 1188,
-                "y": 396,
+                "x": 1260,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -201,8 +233,8 @@
             "component": "routers/PacketRegexpRouter",
             "metadata": {
                 "label": "routers/PacketRegexpRouter",
-                "x": 468,
-                "y": 108,
+                "x": 432,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
@@ -211,8 +243,8 @@
             "component": "strings/ToString",
             "metadata": {
                 "label": "strings/ToString",
-                "x": 360,
-                "y": 108,
+                "x": 324,
+                "y": 684,
                 "width": 72,
                 "height": 72
             }
@@ -221,8 +253,8 @@
             "component": "grove/Lcd",
             "metadata": {
                 "label": "grove/Lcd",
-                "x": 720,
-                "y": 72,
+                "x": 684,
+                "y": 648,
                 "width": 72,
                 "height": 72
             }
@@ -231,66 +263,94 @@
             "component": "core/RunInterval",
             "metadata": {
                 "label": "core/RunInterval",
-                "x": 72,
+                "x": 36,
+                "y": 684,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/CompileString_zlvw8": {
+            "component": "strings/CompileString",
+            "metadata": {
+                "label": "strings/CompileString",
+                "x": 1872,
+                "y": 288,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_m9hei": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 1620,
+                "y": 324,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_ih3qr": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 1620,
                 "y": 108,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/CompileString_nz3zk": {
+            "component": "strings/CompileString",
+            "metadata": {
+                "label": "strings/CompileString",
+                "x": 1872,
+                "y": 72,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_rf7de": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 1620,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/CompileString_b824o": {
+            "component": "strings/CompileString",
+            "metadata": {
+                "label": "strings/CompileString",
+                "x": 1872,
+                "y": 504,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Kick_ekjz2": {
+            "component": "core/Kick",
+            "metadata": {
+                "label": "core/Kick",
+                "x": 1620,
+                "y": 720,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "strings/CompileString_125s0": {
+            "component": "strings/CompileString",
+            "metadata": {
+                "label": "strings/CompileString",
+                "x": 1872,
+                "y": 720,
                 "width": 72,
                 "height": 72
             }
         }
     },
     "connections": [
-        {
-            "src": {
-                "process": "grove/Rotary_x0rvx",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Lcd_4jz2n",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 7
-            }
-        },
-        {
-            "src": {
-                "process": "grove/Light_ipfzr",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Lcd_4jz2n",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 7
-            }
-        },
-        {
-            "src": {
-                "process": "grove/Temp_6t15p",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Lcd_4jz2n",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 7
-            }
-        },
-        {
-            "src": {
-                "process": "grove/Touch_xt6sp",
-                "port": "out"
-            },
-            "tgt": {
-                "process": "grove/Lcd_4jz2n",
-                "port": "in"
-            },
-            "metadata": {
-                "route": 7
-            }
-        },
         {
             "src": {
                 "process": "math/SendNumber_2trze",
@@ -436,12 +496,45 @@
         },
         {
             "src": {
+                "process": "strings/CompileString_zlvw8",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Lcd_4jz2n",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Kick_ih3qr",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/CompileString_nz3zk",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "strings/CompileString_nz3zk",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Lcd_4jz2n",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
                 "process": "routers/PacketRegexpRouter_mbzvk",
                 "port": "out"
             },
             "tgt": {
-                "process": "grove/Touch_xt6sp",
-                "port": "read"
+                "process": "core/Kick_ih3qr",
+                "port": "in"
             },
             "metadata": {
                 "route": 7
@@ -449,7 +542,7 @@
         },
         {
             "src": {
-                "process": "routers/PacketRegexpRouter_mbzvk",
+                "process": "core/Kick_ih3qr",
                 "port": "out"
             },
             "tgt": {
@@ -457,18 +550,103 @@
                 "port": "read"
             },
             "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "grove/Temp_6t15p",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/CompileString_nz3zk",
+                "port": "in"
+            },
+            "metadata": {
                 "route": 7
             }
         },
         {
             "src": {
                 "process": "routers/PacketRegexpRouter_mbzvk",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Kick_rf7de",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 7
+            }
+        },
+        {
+            "src": {
+                "process": "core/Kick_rf7de",
                 "port": "out"
             },
             "tgt": {
                 "process": "grove/Rotary_x0rvx",
                 "port": "abs_value"
             },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "strings/CompileString_b824o",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Lcd_4jz2n",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "strings/CompileString_125s0",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Lcd_4jz2n",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "routers/PacketRegexpRouter_mbzvk",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Kick_ekjz2",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 7
+            }
+        },
+        {
+            "src": {
+                "process": "core/Kick_rf7de",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/CompileString_b824o",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "grove/Rotary_x0rvx",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/CompileString_b824o",
+                "port": "in"
+            },
             "metadata": {
                 "route": 7
             }
@@ -479,12 +657,82 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "grove/Light_ipfzr",
-                "port": "value"
+                "process": "core/Kick_m9hei",
+                "port": "in"
             },
             "metadata": {
                 "route": 7
             }
+        },
+        {
+            "src": {
+                "process": "core/Kick_m9hei",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Touch_xt6sp",
+                "port": "read"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Kick_m9hei",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/CompileString_zlvw8",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "grove/Touch_xt6sp",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/CompileString_zlvw8",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Kick_ekjz2",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "grove/Light_ipfzr",
+                "port": "value"
+            },
+            "metadata": {}
+        },
+        {
+            "src": {
+                "process": "core/Kick_ekjz2",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/CompileString_125s0",
+                "port": "in"
+            },
+            "metadata": {
+                "route": 0
+            }
+        },
+        {
+            "src": {
+                "process": "grove/Light_ipfzr",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "strings/CompileString_125s0",
+                "port": "in"
+            },
+            "metadata": {}
         },
         {
             "data": 2,
@@ -576,6 +824,62 @@
             "tgt": {
                 "process": "core/Kick_y3m8i",
                 "port": "data"
+            }
+        },
+        {
+            "data": "Touch",
+            "tgt": {
+                "process": "core/Kick_m9hei",
+                "port": "data"
+            }
+        },
+        {
+            "data": "Temp.",
+            "tgt": {
+                "process": "core/Kick_ih3qr",
+                "port": "data"
+            }
+        },
+        {
+            "data": "Light",
+            "tgt": {
+                "process": "core/Kick_ekjz2",
+                "port": "data"
+            }
+        },
+        {
+            "data": "Rotary",
+            "tgt": {
+                "process": "core/Kick_rf7de",
+                "port": "data"
+            }
+        },
+        {
+            "data": ": ",
+            "tgt": {
+                "process": "strings/CompileString_zlvw8",
+                "port": "delimiter"
+            }
+        },
+        {
+            "data": ": ",
+            "tgt": {
+                "process": "strings/CompileString_nz3zk",
+                "port": "delimiter"
+            }
+        },
+        {
+            "data": ": ",
+            "tgt": {
+                "process": "strings/CompileString_125s0",
+                "port": "delimiter"
+            }
+        },
+        {
+            "data": ": ",
+            "tgt": {
+                "process": "strings/CompileString_b824o",
+                "port": "delimiter"
             }
         }
     ]
