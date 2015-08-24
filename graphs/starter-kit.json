@@ -29,7 +29,21 @@
             }
         },
         {
-            "name": "Next?",
+            "name": "Wait for input...",
+            "nodes": [
+                "core/Kick_y3m8i",
+                "core/RunInterval_w9zln",
+                "grove/Button_iemmr",
+                "grove/Lcd_9p0x9",
+                "routers/PacketRegexpRouter_4l4cw",
+                "strings/ToString_40mz9"
+            ],
+            "metadata": {
+                "description": ""
+            }
+        },
+        {
+            "name": "Which sensor is next?",
             "nodes": [
                 "math/Accumulate_ex79s",
                 "math/Modulo_dgati",
@@ -42,23 +56,10 @@
             }
         },
         {
-            "name": "Display",
+            "name": "Display sensor output",
             "nodes": [
                 "core/RunTimeout_rrycj",
                 "grove/Lcd_4jz2n"
-            ],
-            "metadata": {
-                "description": ""
-            }
-        },
-        {
-            "name": "Waiting for input",
-            "nodes": [
-                "core/Kick_y3m8i",
-                "grove/Button_iemmr",
-                "grove/Lcd_9p0x9",
-                "routers/PacketRegexpRouter_4l4cw",
-                "strings/ToString_40mz9"
             ],
             "metadata": {
                 "description": ""
