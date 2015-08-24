@@ -11,16 +11,6 @@
     "outports": {},
     "groups": [],
     "processes": {
-        "core/RunInterval_u3aq": {
-            "component": "core/RunInterval",
-            "metadata": {
-                "label": "core/RunInterval",
-                "x": 36,
-                "y": 36,
-                "width": 72,
-                "height": 72
-            }
-        },
         "core/Drop_j13bt": {
             "component": "core/Drop",
             "metadata": {
@@ -50,6 +40,16 @@
                 "width": 72,
                 "height": 72
             }
+        },
+        "core/RunInterval_pcl89": {
+            "component": "core/RunInterval",
+            "metadata": {
+                "label": "core/RunInterval",
+                "x": 36,
+                "y": 36,
+                "width": 72,
+                "height": 72
+            }
         }
     },
     "connections": [
@@ -65,19 +65,8 @@
         },
         {
             "src": {
-                "process": "core/RunInterval_u3aq",
-                "port": "out"
-            },
-            "tgt": {
                 "process": "grove/Button_go3om",
-                "port": "read"
-            },
-            "metadata": {}
-        },
-        {
-            "src": {
-                "process": "grove/Button_go3om",
-                "port": "out"
+                "port": "value"
             },
             "tgt": {
                 "process": "grove/Led_ha711",
@@ -86,11 +75,15 @@
             "metadata": {}
         },
         {
-            "data": 150,
+            "src": {
+                "process": "core/RunInterval_pcl89",
+                "port": "out"
+            },
             "tgt": {
-                "process": "core/RunInterval_u3aq",
-                "port": "interval"
-            }
+                "process": "grove/Button_go3om",
+                "port": "read"
+            },
+            "metadata": {}
         },
         {
             "data": 3,
@@ -104,6 +97,13 @@
             "tgt": {
                 "process": "grove/Button_go3om",
                 "port": "pin"
+            }
+        },
+        {
+            "data": "1500",
+            "tgt": {
+                "process": "core/RunInterval_pcl89",
+                "port": "interval"
             }
         }
     ]
